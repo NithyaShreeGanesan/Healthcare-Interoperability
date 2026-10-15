@@ -66,21 +66,14 @@ export default function LandingPage() {
           <div className="dr-hero-content">
             {/* Left Column Text */}
             <div>
-              <div className="dr-hero-badge">
-                <span>🛡️ PS-013 Healthcare Interoperability</span>
-                <span>•</span>
-                <span>HL7 FHIR R4 Standard</span>
-              </div>
-
               <h1 className="dr-hero-title">
-                A Great Place care for <br />
-                <span className="highlight">yourself</span>
+                Healthcare <br />
+                <span className="highlight">Interoperability</span>
               </h1>
 
               <p className="dr-hero-desc">
-                Medical recovery is most focused in helping you discover your most beautiful smile.
                 A unified, consent-gated health data exchange connecting Hospital A, Clinic B, and Payer C
-                into a single cryptographic FHIR R4 record.
+                into a single cryptographic HL7 FHIR R4 record with Master Patient Index resolution.
               </p>
 
               <div>
