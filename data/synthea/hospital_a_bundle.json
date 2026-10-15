@@ -1,0 +1,146 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-10-01T08:30:00Z"
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:patient-hospital-a-01",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "HOSP-A-90123",
+        "identifier": [
+          {
+            "system": "http://hospital-a.org/mrn",
+            "value": "987-65-4321"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Doe",
+            "given": [
+              "Jane",
+              "Marie"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1985-04-12",
+        "address": [
+          {
+            "line": [
+              "742 Evergreen Terrace"
+            ],
+            "city": "Springfield",
+            "state": "OR",
+            "postalCode": "97477"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-bloodType",
+            "valueString": "O-Positive"
+          }
+        ],
+        "meta": {
+          "source": "Hospital A",
+          "lastUpdated": "2026-10-01T08:30:00Z"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cond-hosp-a-01",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "HOSP-A-COND-101",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "I10",
+              "display": "Essential (primary) hypertension"
+            }
+          ],
+          "text": "Essential (primary) hypertension"
+        },
+        "subject": {
+          "reference": "Patient/HOSP-A-90123"
+        },
+        "recordedDate": "2026-09-28T14:15:00Z",
+        "meta": {
+          "source": "Hospital A",
+          "lastUpdated": "2026-09-28T14:15:00Z"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-hosp-a-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "HOSP-A-OBS-201",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/HOSP-A-90123"
+        },
+        "effectiveDateTime": "2026-09-28T14:20:00Z",
+        "valueQuantity": {
+          "value": 138,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        },
+        "meta": {
+          "source": "Hospital A",
+          "lastUpdated": "2026-09-28T14:20:00Z"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-09-15T10:00:00Z"
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:patient-payer-c-01",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "PAY-C-77192",
+        "identifier": [
+          {
+            "system": "http://bluecross.org/member-id",
+            "value": "987-65-4321"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Doe",
+            "given": [
+              "Jane"
+            ]
+          }
+        ],
+        "birthDate": "1985-04-12",
+        "gender": "female",
+        "meta": {
+          "source": "Payer C",
+          "lastUpdated": "2026-09-15T10:00:00Z"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:med-payer-c-01",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "PAY-C-MED-501",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "866514",
+              "display": "Metformin hydrochloride 500 MG Oral Tablet"
+            }
+          ],
+          "text": "Metformin 500mg Oral Tablet"
+        },
+        "subject": {
+          "reference": "Patient/PAY-C-77192"
+        },
+        "authoredOn": "2026-09-10T16:20:00Z",
+        "meta": {
+          "source": "Payer C",
+          "lastUpdated": "2026-09-10T16:20:00Z"
+        }
+      }
+    }
+  ]
+}

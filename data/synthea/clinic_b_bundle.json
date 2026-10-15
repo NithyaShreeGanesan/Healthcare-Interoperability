@@ -1,0 +1,131 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "lastUpdated": "2026-10-05T11:45:00Z"
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:patient-clinic-b-01",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "CLN-B-55410",
+        "name": [
+          {
+            "use": "usual",
+            "family": "Doe",
+            "given": [
+              "Jane"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1985-04-12",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "555-234-5678",
+            "use": "mobile"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-bloodType",
+            "valueString": "O-Positive"
+          }
+        ],
+        "meta": {
+          "source": "Clinic B",
+          "lastUpdated": "2026-10-05T11:45:00Z"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:allergy-cln-b-01",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "id": "CLN-B-ALL-301",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "medication"
+        ],
+        "criticality": "high",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "7980",
+              "display": "Penicillin G"
+            }
+          ],
+          "text": "Severe Penicillin Anaphylaxis"
+        },
+        "subject": {
+          "reference": "Patient/CLN-B-55410"
+        },
+        "recordedDate": "2026-08-15T09:00:00Z",
+        "meta": {
+          "source": "Clinic B",
+          "lastUpdated": "2026-08-15T09:00:00Z"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:obs-cln-b-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "CLN-B-OBS-402",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1558-6",
+              "display": "Fasting Blood Glucose"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/CLN-B-55410"
+        },
+        "effectiveDateTime": "2026-03-10T08:00:00Z",
+        "valueQuantity": {
+          "value": 95,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "meta": {
+          "source": "Clinic B",
+          "lastUpdated": "2026-03-10T08:00:00Z"
+        }
+      }
+    }
+  ]
+}
